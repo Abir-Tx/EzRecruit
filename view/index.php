@@ -26,11 +26,11 @@
 
 		<div class="things">
 			<div class="blocks">
-				<a href="./pages/registration.php">Sign Up</a>
+				<a href="#">Sign Up</a>
 			</div>
 
 			<div class="blocks">
-				<a href="./pages/login.php">Login</a>
+				<a href="#">Login</a>
 			</div>
 		</div>
 

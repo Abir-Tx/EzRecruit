@@ -4,7 +4,7 @@
 
 <header>
 	<nav>
-		<a href="/webtech/lab4/recruiterx">
+		<a href="#">
 			<h1>EzRecruit</h1>
 		</a>
 
