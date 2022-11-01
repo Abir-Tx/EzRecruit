@@ -1,0 +1,52 @@
+.welcome {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 8vh;
+  }
+}
+
+.quickThings {
+  padding: 30px;
+  h3 {
+    color: rgb(123, 197, 222);
+    text-align: center;
+    font-size: 4vh;
+  }
+  p {
+    span {
+      font-size: 3vh;
+    }
+  }
+
+  .things {
+    display: flex;
+    .blocks {
+      width: 30vw;
+      box-shadow: 1px 1px 2px;
+      height: 3vh;
+      padding: 30px;
+      margin: 5px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 3vh;
+      transition: 0.2s ease-in-out;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        background-color: lightblue;
+        cursor: pointer;
+        color: white;
+        box-shadow: 3px 3px 5px lightblue;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

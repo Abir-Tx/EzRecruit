@@ -8,6 +8,7 @@
 	<title>Home | EzRecruit</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="./styles/css/commons.css">
+	<link rel="stylesheet" href="./styles/css/index.css">
 </head>
 
 <body>
