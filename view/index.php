@@ -32,6 +32,10 @@
 			<div class="blocks">
 				<a href="#">Login</a>
 			</div>
+
+			<div class="blocks">
+				<a href="#">Manage</a>
+			</div>
 		</div>
 
 	</div>
