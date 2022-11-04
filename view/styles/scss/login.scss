@@ -1,0 +1,77 @@
+// Stylesheet for login page
+
+.loginBox {
+  width: 100vw;
+  // height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  // margin: 20px;
+  padding: 20px;
+  .miniCon {
+    width: 80vw;
+    height: 60vh;
+    box-shadow: 3px 3px 15px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    h2 {
+      text-align: center;
+      letter-spacing: 10px;
+    }
+
+    .formContainer {
+      width: 90%;
+      padding: 20px;
+
+      .inp {
+        height: 3vh;
+        width: 30vw;
+        border-radius: 30px;
+      }
+
+      .btnCon {
+        text-align: center;
+        .subBtn {
+          width: 15vw;
+          padding: 5px;
+          background-color: lightblue;
+          transition: 0.2s ease-in;
+          font-size: larger;
+          // border: none;
+          // box-shadow: 2px 2px 5px;
+
+          &:hover {
+            background-color: lightblue;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+          }
+          &:active {
+            box-shadow: inset 2px 2px 3px black;
+          }
+        }
+      }
+      .remMe {
+        font-weight: bold;
+      }
+
+      .error {
+        color: red;
+        font-style: italic;
+      }
+
+      .linkCon {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
