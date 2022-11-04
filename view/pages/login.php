@@ -27,7 +27,7 @@
 	$uname = $pass = "";
 
 	$loginSuccess = false;
-	$dataFileLoc = "../data.json";
+	$dataFileLoc = "../../model/adminUsers.json";
 
 	$inputOk = false;
 	$found = false;

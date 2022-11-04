@@ -10,11 +10,11 @@
 
 		<ul>
 			<li>
-				<a href="#">Home</a>
+				<a href="/EzRecruit/view/">Home</a>
 			</li>
 
 			<li>
-				<a href="#">Login</a>
+				<a href="/EzRecruit/view/pages/login.php">Login</a>
 			</li>
 
 			<li>
