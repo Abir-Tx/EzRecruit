@@ -56,4 +56,29 @@ footer a {
 }
 footer a:hover {
   color: red;
+}
+
+.accountSubmenu ul {
+  list-style: none;
+  display: flex;
+  margin: 5px;
+  padding: 10px;
+}
+.accountSubmenu ul li {
+  margin: 5px;
+  width: 15vw;
+  height: 5vh;
+  padding: 15px;
+  box-shadow: 1px 1px 2px black;
+  transition: 0.3s ease-out;
+  color: blue;
+  text-align: center;
+}
+.accountSubmenu ul li:hover {
+  background-color: lightblue;
+}
+.accountSubmenu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
 }/*# sourceMappingURL=commons.css.map */
