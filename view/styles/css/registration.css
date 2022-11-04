@@ -1,0 +1,24 @@
+.reg {
+  padding: 20px;
+}
+.reg .error {
+  color: red;
+  font-style: italic;
+}
+.reg .btnCon {
+  display: flex;
+  justify-content: center;
+}
+.reg .btnCon input {
+  padding: 10px;
+  margin: 10px;
+  width: 15vw;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+.reg .btnCon input:hover {
+  background-color: grey;
+  color: white;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=registration.css.map */
