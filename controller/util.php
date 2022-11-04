@@ -1,7 +1,9 @@
 <?php
 function fetch($dataLoc, $logoutUrl)
 {
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	$details[] = array();
 	if (isset($_SESSION['uname'])) {
 		$dataFileLoc = $dataLoc;
