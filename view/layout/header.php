@@ -28,7 +28,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<?php
 
 			if (isset($_SESSION['uname'])) {
-				echo "<li><a href='#'>Sign Up</a></li>";
+				echo "<li><a href='/EzRecruit/view/pages/registration.php'>Sign Up</a></li>";
 			} else {
 				echo "";
 			}

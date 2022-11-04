@@ -10,6 +10,7 @@
 		<li><a href="./changeProPic.php">Change Profile Picture</a></li>
 		<li><a href="./changePass.php">Change Password</a></li>
 		<li><a href="../../controller/logout.php">Logout</a></li>
+		<li><a href="./registration.php">Register new Admin</a></li>
 	</ul>
 </div>
 <hr>
