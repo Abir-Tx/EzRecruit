@@ -1,0 +1,74 @@
+[
+	{
+		"name": "Abir Mushfiqur Rahman",
+		"email": "mushfiqurrohomanabir@gmail.com",
+		"uname": "nibir",
+		"password": "abir12918@#",
+		"gender": "male",
+		"dob": "2022-10-24",
+		"imageFile": "abir.jpg"
+	},
+	{
+		"name": "mac book",
+		"email": "mac@gmail.com",
+		"uname": "mac",
+		"password": "mac12345@#",
+		"gender": "male",
+		"dob": "2022-10-31",
+		"imageFile": ""
+	},
+	{
+		"name": "sac book",
+		"email": "sac@gmail.com",
+		"uname": "sac",
+		"password": "nibir12345@#",
+		"gender": "male",
+		"dob": "2022-11-01",
+		"imageFile": ""
+	},
+	{
+		"name": "Test My Name",
+		"email": "testme@yahoo.com",
+		"uname": "testme",
+		"password": "nibir12345@#",
+		"gender": "male",
+		"dob": "2021-08-11",
+		"imageFile": ""
+	},
+	{
+		"name": "Arduino Duno",
+		"email": "duno@gmail.com",
+		"uname": "duno",
+		"password": "nibir12345@#",
+		"gender": "male",
+		"dob": "2022-10-25",
+		"imageFile": "20-42738-1.jpg"
+	},
+	{
+		"name": "Mr John",
+		"email": "john@yahoo.com",
+		"uname": "john",
+		"password": "john12918@#",
+		"gender": "male",
+		"dob": "1999-02-17",
+		"imageFile": "naruto.jpg"
+	},
+	{
+		"name": "",
+		"email": "",
+		"uname": "nibir",
+		"password": "",
+		"gender": "",
+		"dob": "",
+		"imageFile": ""
+	},
+	{
+		"name": "",
+		"email": "",
+		"uname": "nibir",
+		"password": "",
+		"gender": "",
+		"dob": "",
+		"imageFile": ""
+	}
+]
