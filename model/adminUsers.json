@@ -52,23 +52,5 @@
 		"gender": "male",
 		"dob": "1999-02-17",
 		"imageFile": "naruto.jpg"
-	},
-	{
-		"name": "",
-		"email": "",
-		"uname": "nibir",
-		"password": "",
-		"gender": "",
-		"dob": "",
-		"imageFile": ""
-	},
-	{
-		"name": "",
-		"email": "",
-		"uname": "nibir",
-		"password": "",
-		"gender": "",
-		"dob": "",
-		"imageFile": ""
 	}
 ]

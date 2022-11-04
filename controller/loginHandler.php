@@ -1,7 +1,7 @@
 
 <?PHP
 if (isset($_SESSION['uname'])) {
-	header('Location: /EzRecruit/view/');
+	header('Location: /EzRecruit/view/pages/dashboard.php');
 }
 // Variables
 $unameErr = $passErr = "";
