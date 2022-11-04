@@ -2,15 +2,27 @@
 <hr>
 <div class="accountSubmenu">
 	<ul>
-		<li>
-			<a href="./dashboard.php">Dashboard</a>
-		</li>
-		<li><a href="./view.php">View Profile</a></li>
-		<li><a href="./edit.php">Edit Profile</a></li>
-		<li><a href="./changeProPic.php">Change Profile Picture</a></li>
-		<li><a href="./changePass.php">Change Password</a></li>
-		<li><a href="../../controller/logout.php">Logout</a></li>
-		<li><a href="./registration.php">Register new Admin</a></li>
+		<a href="./dashboard.php">
+			<li>Dashboard</li>
+		</a>
+		<a href="./view.php">
+			<li>View Profile</li>
+		</a>
+		<a href="./edit.php">
+			<li>Edit Profile</li>
+		</a>
+		<a href="./changeProPic.php">
+			<li>Change Profile Picture</li>
+		</a>
+		<a href="./changePass.php">
+			<li>Change Password</li>
+		</a>
+		<a href="./registration.php">
+			<li>Register new Admin</li>
+		</a>
+		<a href="../../controller/logout.php">
+			<li>Logout</li>
+		</a>
 	</ul>
 </div>
 <hr>

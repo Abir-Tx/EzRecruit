@@ -64,9 +64,14 @@ footer a:hover {
   margin: 5px;
   padding: 10px;
 }
-.accountSubmenu ul li {
+.accountSubmenu ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+.accountSubmenu ul a li {
   margin: 5px;
-  width: 15vw;
+  width: 11vw;
   height: 5vh;
   padding: 15px;
   box-shadow: 1px 1px 2px black;
@@ -74,11 +79,6 @@ footer a:hover {
   color: blue;
   text-align: center;
 }
-.accountSubmenu ul li:hover {
+.accountSubmenu ul a li:hover {
   background-color: lightblue;
-}
-.accountSubmenu ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: inherit;
 }/*# sourceMappingURL=commons.css.map */
