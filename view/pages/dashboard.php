@@ -12,7 +12,9 @@
 <body>
 	<?php @include "../layout/header.php" ?>
 	<?php
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	if (isset($_SESSION['uname'])) {
 		$dataFileLoc = "../../model/adminUsers.json";
 		$data = json_decode(file_get_contents($dataFileLoc));
