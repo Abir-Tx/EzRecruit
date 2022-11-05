@@ -6,13 +6,13 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <header>
 	<nav>
-		<a href="#">
+		<a href="/EzRecruit/view/index.php">
 			<h1>EzRecruit</h1>
 		</a>
 
 		<ul>
 			<li>
-				<a href="/EzRecruit/view/">Home</a>
+				<a href="/EzRecruit/view/index.php">Home</a>
 			</li>
 
 			<li>
