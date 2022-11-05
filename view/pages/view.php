@@ -27,7 +27,7 @@
 
 	<div class="details">
 		<div class="proPic">
-			<img src='../images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>'>
+			<img src='../../model/images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>'>
 		</div>
 		<div class="textDet">
 			<label for="name">Name : <?php echo ucFirst($details[0]) ?></label>

@@ -81,7 +81,7 @@
 	<h2>Change Profile Picture</h2>
 	<div class="changeProPic">
 		<div class="imageCon">
-			<img src='../images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>' height="150px">
+			<img src='../../model/images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>' height="150px">
 		</div>
 		<br>
 
