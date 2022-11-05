@@ -2,6 +2,7 @@
 $nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = $proPicErr = "";
 $name = $email = $dob = $gender = $uname = $proPic = $newPass = "";
 $passed = false;
+$checkCount = 0;
 $dataFileLoc = "../../model/adminUsers.json";
 
 
@@ -18,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
 		$name = $_POST["name"];
 		$passed = true;
+		$checkCount = 1;
 	}
 
 	if (empty($_POST["email"])) {
@@ -27,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
 		$email = $_POST["email"];
 		$passed = true;
+		$checkCount = 2;
 	}
 
 	// Password
@@ -35,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} elseif ($_POST["newPass"] == $_POST["conPass"]) {
 		$newPass = $_POST["newPass"];
 		$passed = true;
+		$checkCount = 3;
 	} else
 		$newPassErr = "The new password do not match with the retyped password";
 
@@ -44,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
 		$gender = $_POST["gender"];
 		$passed = true;
+		$checkCount = 4;
 	}
 
 	// DOB
@@ -55,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		} else {
 			$dob = $_POST["date"];
 			$passed = true;
+			$checkCount = 5;
 		}
 	}
 
@@ -64,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
 		$uname = $_POST["uname"];
 		$passed = true;
+		$checkCount = 6;
 	}
 
 	// Profile Picture Upload & check
@@ -111,6 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 			echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
 			$passed = true;
+			$checkCount = 7;
 		} else {
 			echo "Sorry, there was an error uploading your file.";
 			$passed = false;
@@ -118,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 
-	if ($passed) {
+	if ($passed === true && $checkcount === 7) {
 		$currentData = file_get_contents($dataFileLoc);
 		$newData = json_decode($currentData, true);
 
