@@ -15,12 +15,14 @@
 	if (session_status() == PHP_SESSION_NONE) {
 		session_start();
 	}
+	$count  = 0;
 	if (isset($_SESSION['uname'])) {
 		$dataFileLoc = "../../model/adminUsers.json";
 		$data = json_decode(file_get_contents($dataFileLoc));
 		$name =  $email = "";
 
 		foreach ($data as $key => $obj) {
+			$count++;
 			// Fetch information of only the logged in user using session
 			foreach ($obj as $item => $val) {
 				if ($_SESSION['uname'] == $val) {
@@ -31,11 +33,19 @@
 		}
 
 		// Displaying the details
+
+
 		echo "<code>logged in as " . $_SESSION['uname'] . " | </code>";
 		print('<a href="../../controller/logout.php">logout</a>');
-		echo "<H1>Welcome " . ucwords($name) . "</H1>";
-		// Including the subpages/components
+
+
 		@include "../components/subMenu.php";
+
+
+		echo "<H1>Welcome " . ucwords($name) . "</H1>";
+
+		echo "<p> There are currently  " . $count . " <b>Admin</b> accounts registered</p>";
+		// Including the subpages/components
 	} else {
 		echo "<p> You need to be logged in to be able to view this page</p>";
 		echo "<p>Please Login</p>";
