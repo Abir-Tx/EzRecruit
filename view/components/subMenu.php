@@ -20,6 +20,9 @@
 		<a href="./registration.php">
 			<li>Register new Admin</li>
 		</a>
+		<a href="./manageCandidades.php">
+			<li>Manage Candidades</li>
+		</a>
 		<a href="../../controller/logout.php">
 			<li>Logout</li>
 		</a>
