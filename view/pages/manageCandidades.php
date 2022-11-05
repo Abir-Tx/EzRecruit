@@ -20,6 +20,25 @@
 	?>
 
 	<h2>Manage Candidades</h2>
+
+	<h4>Registered Candidades</h4>
+
+	<?php
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
+	if (isset($_SESSION['uname'])) {
+		$dataFileLoc = "../../model/candidades.json";
+		$data = json_decode(file_get_contents($dataFileLoc));
+
+		foreach ($data as $key => $obj) {
+			echo "<h6> Candidade " . ($key + 1) . "</h6>";
+			echo "<li> <b>Name:</b> " . $obj->name . "</li>";
+			echo "<li> <b>Email:</b> " . $obj->email . "</li>";
+		}
+	}
+
+	?>
 </body>
 
 </html>
