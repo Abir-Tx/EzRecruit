@@ -81,4 +81,55 @@ footer a:hover {
 }
 .accountSubmenu ul a li:hover {
   background-color: lightblue;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}
+
+.details {
+  padding: 40px;
+}
+.details .proPic {
+  display: flex;
+  justify-content: center;
+}
+.details .proPic img {
+  height: 30vh;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px;
+  margin-bottom: 30px;
+}
+.details .textDet {
+  padding: 10px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px;
+}
+.details .textDet label {
+  font-weight: bold;
+}
+
+.editBtnCon {
+  text-align: center;
+}
+.editBtnCon button {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.editBtnCon button a {
+  text-decoration: none;
+}
+
+.passResCon {
+  display: flex;
+  flex-direction: column;
+}
+.passResCon h2 {
+  text-align: center;
+}
+.passResCon .msg {
+  font-style: italic;
+  color: blue;
 }/*# sourceMappingURL=commons.css.map */
