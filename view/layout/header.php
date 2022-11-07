@@ -28,7 +28,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<li>
 				<?php
 				if (isset($_SESSION['user'])) {
-					null;
+					echo "<a href='/EzRecruit/view/pages/admin/login.php'>Admin Login</a>";
 				} else {
 					echo "<a href='/EzRecruit/view/pages/general/signup.php'>Sign Up</a>";
 				}
