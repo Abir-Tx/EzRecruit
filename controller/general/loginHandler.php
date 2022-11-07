@@ -33,8 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if ($pass) {
 		session_start();
+		/* Store the whole user info into an array in session */
 		$_SESSION["user"] = $result[0];
 		header("Location: ../../index.php");
+		// echo $_SESSION["user"]["name"];
 	} else {
 		echo "Login failed";
 	}
