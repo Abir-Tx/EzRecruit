@@ -6,6 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home | EzRecruit</title>
+	<?php
+	include("./controller/util.php");
+	meta("Home, EzRecruit, Job, Recruitment, Job Search", "Home page of EzRecruit, a job recruitment website");
+	?>
 	<!-- Styles -->
 	<link rel="stylesheet" href="./styles/css/commons.css">
 	<link rel="stylesheet" href="./styles/css/index.css">

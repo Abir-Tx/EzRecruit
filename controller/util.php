@@ -34,3 +34,11 @@ function fetch($dataLoc, $logoutUrl)
 	// print(var_dump($details));
 	return $details;
 }
+
+function meta($pgKeywords, $pgDesc)
+{ ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="<?php echo $pgKeywords ?>">
+	<meta name="description" content="<?php echo $pgDesc ?>"><?php
+								} ?>
