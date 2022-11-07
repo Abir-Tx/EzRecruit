@@ -14,7 +14,8 @@
 <body>
 	<?php
 	@include "../../layout/header.php";
-	@include "../../../controller/admin/adminLoginHandler.php";
+	@require_once "../../../model/db_connect.php";
+
 	if (!isset($_SESSION["user"])) {
 		echo "Please login first";
 		die();
@@ -22,6 +23,54 @@
 	?>
 	<!-- HTML -->
 	<h1>Recruitment Form</h1>
+	<?php
+	$fname = $lname = $email = $phone = $address  = $dob  = $education  = $skills = $resume = $password = $cpassword = $shortBio = $propic = "";
+	$isValid = false;
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$address = $_POST['address'];
+		$dob = $_POST['dob'];
+		$education = $_POST['education'];
+		$skills = $_POST['skills'];
+		$resume = $_POST['resume'];
+		$password = $_POST['password'];
+		$cpassword = $_POST['cpassword'];
+		$shortBio = $_POST['shortBio'];
+		$propic = $_POST['propic'];
+		$isValid = true;
+	}
+
+	$conn = db_connect();
+	$insertQuery = "INSERT INTO candidates (fname, lname, email, phone, address, dob, education, skills, resume, password, bio, propic) VALUES (:fname, :lname, :email, :phone, :address, :dob, :education, :skills, :resume, :password, :shortBio, :propic)";
+	try {
+		$stmt = $conn->prepare($insertQuery);
+		if ($isValid) {
+			$stmt->execute([
+				":fname" => $fname,
+				":lname" => $lname,
+				":email" => $email,
+				":phone" => $phone,
+				":address" => $address,
+				":dob" => $dob,
+				":education" => $education,
+				":skills" => $skills,
+				":resume" => $resume,
+				":password" => $password,
+				":shortBio" => $shortBio,
+				":propic" => $propic
+			]);
+
+			echo "Candidate added successfully";
+		}
+	} catch (PDOException $e) {
+		echo "Error: " . $e->getMessage();
+	}
+
+	$conn = null;
+	?>
 
 	<div class="recruitmentFormCon">
 		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
