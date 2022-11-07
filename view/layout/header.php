@@ -34,6 +34,18 @@ if (session_status() == PHP_SESSION_NONE) {
 				}
 				?>
 			</li>
+
+			<li>
+				<?php
+				if (isset($_SESSION['user'])) {
+					echo "<a href='/EzRecruit/view/pages/candidate/'>Candidate</a>";
+				} else {
+					echo "<a href='/EzRecruit/view/pages/general/about.php'></a>";
+				}
+				?>
+
+
+			</li>
 		</ul>
 	</nav>
 </header>
