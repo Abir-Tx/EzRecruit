@@ -20,19 +20,14 @@ if (session_status() == PHP_SESSION_NONE) {
 				if (isset($_SESSION['uname'])) {
 					echo "<a href='/EzRecruit/view/pages/dashboard.php'>My Dashboard</a>";
 				} else {
-					echo "<a href='/EzRecruit/view/pages/login.php'>Login</a>";
+					echo "<a href='/EzRecruit/view/pages/general/login.php'>Login</a>";
 				}
 				?>
 			</li>
 
-			<?php
-
-			if (isset($_SESSION['uname'])) {
-				echo "<li><a href='/EzRecruit/view/pages/registration.php'>Sign Up</a></li>";
-			} else {
-				echo "";
-			}
-			?>
+			<li>
+				<a href="/EzRecruit/view/pages/general/signup.php">Sign Up</a>
+			</li>
 		</ul>
 	</nav>
 </header>
