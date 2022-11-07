@@ -1,7 +1,7 @@
 <?PHP
 
 if (isset($_SESSION['admin'])) {
-	header('Location: /EzRecruit/view');
+	header('Location: /EzRecruit/view/pages/admin/dashboard.php');
 }
 // Variables
 $unameErr = $passErr = "";
@@ -80,8 +80,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// $loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
 	if ($loginSuccess) {
 		session_start();
-		header("Location: /EzRecruit/view");
 		$_SESSION["admin"] = $uname;
+		header("Location: /EzRecruit/view/pages/admin/dashboard.php");
 		die();
 	} else {
 		echo "\nFailed Login";
