@@ -29,6 +29,7 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Phone</th>
+				<th>Selected ?</th>
 			</tr>
 			<tbody>
 				<?php
@@ -37,11 +38,13 @@
 				$stmt->execute();
 
 				$candidates = $stmt->fetchAll(PDO::FETCH_ASSOC);
-				foreach ($candidates as $i => $cadidate) {
+				foreach ($candidates as $i => $candidate) {
 					echo "<tr>";
-					echo "<td>" . $cadidate['lname'] . "</td>";
-					echo "<td>" . $cadidate['email'] . "</td>";
-					echo "<td>" . $cadidate['phone'] . "</td>";
+					echo "<td>" . $candidate['lname'] . "</td>";
+					echo "<td>" . $candidate['email'] . "</td>";
+					echo "<td>" . $candidate['phone'] . "</td>";
+					// echo "<td><input type='checkbox' name='select' value='" . $candidate['id'] . "'></td>";
+					echo $candidate['selected'] === 1 ? print("<td>Yes</td>") : print("<td>No</td>");
 					echo "</tr>";
 				}
 				?>
