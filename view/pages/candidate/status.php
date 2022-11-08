@@ -12,16 +12,23 @@
 <body>
 	<?php
 	@include "../../layout/header.php";
-	@include "../../../controller/candidate/candidateLoginHandler.php";
+	@require_once "../../../model/db_connect.php";
 	if (!isset($_SESSION["user"])) {
 		echo "Please login first";
 		die();
 	}
+
+	$conn = db_connect();
+	$stmt = $conn->prepare("SELECT * FROM candidates WHERE id = :id");
+	$stmt->execute([
+		":id" => $_SESSION["user"]["id"]
+	]);
+
 	?>
 	<!-- HTML -->
 	<h1>Candidate Status</h1>
 	<h4>
-		You have been selected
+		You have been <?php echo $stmt->fetch(PDO::FETCH_ASSOC)["selected"] === 1 ? "selected" : "not selected" ?>
 	</h4>
 
 

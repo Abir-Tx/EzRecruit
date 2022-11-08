@@ -48,6 +48,7 @@
 					echo "</tr>";
 				}
 				?>
+				$conn = null;
 			</tbody>
 
 		</table>
