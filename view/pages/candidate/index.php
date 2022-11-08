@@ -28,7 +28,7 @@
 
 		<div class="candiBtn">
 			<a href="./register.php">Apply</a>
-			<a href="status.php">Status</a>
+			<a href="./login.php">Status</a>
 		</div>
 		<?php @include "../../layout/footer.php" ?>
 </body>
