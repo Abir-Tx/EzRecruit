@@ -47,8 +47,9 @@
 					echo $candidate['selected'] === 1 ? print("<td>Yes</td>") : print("<td>No</td>");
 					echo "</tr>";
 				}
-				?>
+
 				$conn = null;
+				?>
 			</tbody>
 
 		</table>
