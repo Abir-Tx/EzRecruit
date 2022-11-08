@@ -1,63 +1,47 @@
-.loginBox {
-  width: 100vw;
+.loginCon {
   display: flex;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.loginCon h2 {
+  text-align: center;
+}
+.loginCon .formCon {
+  width: 650px;
+  height: 500px;
+  background-color: rgb(231, 230, 230);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-}
-.loginBox .miniCon {
-  width: 80vw;
-  height: 60vh;
-  box-shadow: 3px 3px 15px;
+  margin: 20px;
   border-radius: 40px;
+  box-shadow: 3px 3px 5px;
+}
+.loginCon .formCon .inputCon {
+  margin: 10px;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
-.loginBox .miniCon h2 {
-  text-align: center;
-  letter-spacing: 10px;
-}
-.loginBox .miniCon .formContainer {
-  width: 90%;
-  padding: 20px;
-}
-.loginBox .miniCon .formContainer .inp {
+.loginCon .formCon .inputCon input {
+  border-radius: 10px;
+  border: none;
+  width: 350px;
   height: 3vh;
-  width: 30vw;
-  border-radius: 30px;
 }
-.loginBox .miniCon .formContainer .btnCon {
-  text-align: center;
+.loginCon .formCon .submitCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.loginBox .miniCon .formContainer .btnCon .subBtn {
-  width: 15vw;
-  padding: 5px;
-  background-color: lightblue;
-  transition: 0.2s ease-in;
-  font-size: larger;
+.loginCon .formCon .submitCon input {
+  height: 3vh;
+  width: 10vw;
+  font-size: large;
+  transition: 0.2s ease-in-out;
 }
-.loginBox .miniCon .formContainer .btnCon .subBtn:hover {
-  background-color: lightblue;
+.loginCon .formCon .submitCon input:hover {
+  font-weight: bold;
   cursor: pointer;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.loginBox .miniCon .formContainer .btnCon .subBtn:active {
-  box-shadow: inset 2px 2px 3px black;
-}
-.loginBox .miniCon .formContainer .remMe {
-  font-weight: bold;
-}
-.loginBox .miniCon .formContainer .error {
-  color: red;
-  font-style: italic;
-}
-.loginBox .miniCon .formContainer .linkCon p {
-  text-align: center;
 }/*# sourceMappingURL=login.css.map */

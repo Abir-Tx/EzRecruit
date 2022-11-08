@@ -9,6 +9,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+	<link rel="stylesheet" href="../../styles/css/login.css">
 </head>
 
 <body>
@@ -19,24 +20,26 @@
 
 	<div class="loginCon">
 		<h2>Login</h2>
-		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-			<div class="inputCon">
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" placeholder="Enter your email" required>
-			</div>
+		<div class="formCon">
+			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+				<div class="inputCon">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" placeholder="Enter your email" required>
+				</div>
 
-			<div class="inputCon">
-				<label for="pass">Password</label>
-				<input type="password" name="pass" id="pass" placeholder="Enter your password" required>
-			</div>
+				<div class="inputCon">
+					<label for="pass">Password</label>
+					<input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+				</div>
 
-			<div class="inputCon">
-				<input type="submit" value="Submit">
-			</div>
-		</form>
+				<div class="submitCon">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
 
-
-		<?php @include "../../layout/footer.php" ?>
+	</div>
+	<?php @include "../../layout/footer.php" ?>
 </body>
 
 </html>
