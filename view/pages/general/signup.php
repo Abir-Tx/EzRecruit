@@ -10,6 +10,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+	<link rel="stylesheet" href="../../styles/css/signUp.css">
 </head>
 
 <body>
@@ -42,11 +43,13 @@
 				<input type="password" name="cpass" id="cpass" placeholder="Confirm your password" required>
 			</div>
 
-			<div class="inputCon">
+			<div class="submitCon">
 				<input type="submit" value="Submit">
 			</div>
+		</form>
+	</div>
 
-			<?php @include "../../layout/footer.php" ?>
+	<?php @include "../../layout/footer.php" ?>
 </body>
 
 </html>
