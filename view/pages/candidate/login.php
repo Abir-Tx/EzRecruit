@@ -14,14 +14,30 @@
 <body>
 	<?php
 	@include "../../layout/header.php";
-	@include "../../../controller/admin/adminLoginHandler.php";
+	@include "../../../controller/candidate/candidateLoginHandler.php";
 	if (!isset($_SESSION["user"])) {
 		echo "Please login first";
 		die();
 	}
 	?>
 	<!-- HTML -->
-	candi login
+	<h1>Candidate Login</h1>
+
+	<form action=<?php echo $_SERVER["PHP_SELF"]; ?> method="POST">
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="Enter your email" required>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" placeholder="Enter your password" required>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Login">
+		</div>
+	</form>
+
+
 	<?php @include "../../layout/footer.php" ?>
 </body>
 
