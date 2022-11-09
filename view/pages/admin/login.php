@@ -1,5 +1,3 @@
-<!-- Login page | RecruiterX | By Mushfiqur Rahman Abir-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,20 +5,22 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login | EzRecruit</title>
-
-	<link rel="stylesheet" href="../styles/css/login.css">
-	<link rel="stylesheet" href="../styles/css/commons.css">
+	<title>Admin Login | EzRecruit</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="../../styles/css/commons.css">
+	<link rel="stylesheet" href="../../styles/css/index.css">
 </head>
 
 <body>
 	<?php
-	session_start();
-	@include "../layout/header.php";
-	@include "../../controller/loginHandler.php"
+	@include "../../layout/header.php";
+	@include "../../../controller/admin/adminLoginHandler.php";
+	if (!isset($_SESSION["user"])) {
+		echo "Please login first";
+		die();
+	}
 
 	?>
-
 	<!-- HTML -->
 	<div class="loginBox">
 		<div class="miniCon">
@@ -67,7 +67,9 @@
 		</div>
 
 	</div>
-	<?php @include "../layout/footer.php" ?>
+
+
+	<?php @include "../../layout/footer.php" ?>
 </body>
 
 </html>

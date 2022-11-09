@@ -1,7 +1,7 @@
-
 <?PHP
-if (isset($_SESSION['uname'])) {
-	header('Location: /EzRecruit/view/pages/dashboard.php');
+
+if (isset($_SESSION['admin'])) {
+	header('Location: /EzRecruit/view/pages/admin/dashboard.php');
 }
 // Variables
 $unameErr = $passErr = "";
@@ -13,6 +13,8 @@ $dataFileLoc = "../../model/adminUsers.json";
 $inputOk = false;
 $found = false;
 $cookieTimeout = 120;
+
+@require_once "../../../model/db_connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Validate User name
@@ -51,32 +53,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "Cookie not set";
 	}
 
-	/*  matching with json data */
+	/*  matching with DB data */
 
-	// Getting the json data
-	$data = json_decode(file_get_contents($dataFileLoc));
+	// Getting the DB data
+	$conn = db_connect();
+	$selectQuery = "SELECT * FROM admins WHERE uname = :uname AND password = :password";
+	try {
+		$stmt = $conn->prepare($selectQuery);
+		$stmt->execute([
+			":uname" => $uname,
+			":password" => $pass
+		]);
 
-	// Compare and verify the password and username with json data
-	if ($inputOk) {
-		foreach ($data as $d) {
-			if ($found) break;
-			else {
-				$d->uname == $uname ? ($loginSuccess = true) . ($found = true) : (($unameErr = "Username do not match") . ($loginSuccess = false));
-				$loginSuccess ? ($d->password == $pass ? ($loginSuccess = true) . ($found = true) : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null;
-			}
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if (count($result) > 0) {
+			$loginSuccess = true;
 		}
+	} catch (PDOException $e) {
+		$unameErr =  "Error: " . $e->getMessage();
 	}
+
 
 
 	// Handle success or unsuccessfull login
 	// $loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
 	if ($loginSuccess) {
 		session_start();
-		header("Location: ./dashboard.php");
-		$_SESSION["uname"] = $uname;
+		$_SESSION["admin"] = $uname;
+		header("Location: /EzRecruit/view/pages/admin/dashboard.php");
 		die();
-	} /* else {
-			echo "Failed Login";
-		} */
+	} else {
+		echo "\nFailed Login";
+	}
 }
-?>

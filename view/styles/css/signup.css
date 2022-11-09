@@ -1,0 +1,32 @@
+.signUpCon {
+  padding: 10px;
+}
+.signUpCon h2 {
+  text-align: center;
+}
+.signUpCon .inputCon {
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.signUpCon .inputCon input {
+  width: 400px;
+  height: 25px;
+  border-radius: 10px;
+}
+.signUpCon .submitCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUpCon .submitCon input {
+  height: 3vh;
+  width: 10vw;
+  font-size: large;
+  transition: 0.2s ease-in-out;
+}
+.signUpCon .submitCon input:hover {
+  font-weight: bold;
+  cursor: pointer;
+}/*# sourceMappingURL=signup.css.map */

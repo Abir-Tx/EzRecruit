@@ -17,22 +17,43 @@ if (session_status() == PHP_SESSION_NONE) {
 
 			<li>
 				<?php
-				if (isset($_SESSION['uname'])) {
-					echo "<a href='/EzRecruit/view/pages/dashboard.php'>My Dashboard</a>";
+				if (isset($_SESSION['user'])) {
+					echo "<a href='/EzRecruit/view/pages/admin/login.php'>Admin</a>";
 				} else {
-					echo "<a href='/EzRecruit/view/pages/login.php'>Login</a>";
+					echo "<a href='/EzRecruit/view/pages/general/signup.php'>Sign Up</a>";
 				}
 				?>
 			</li>
 
-			<?php
+			<li>
+				<?php
+				if (isset($_SESSION['user'])) {
+					echo "<a href='/EzRecruit/view/pages/candidate/'>Candidate</a>";
+				} else {
+					echo "<a href='/EzRecruit/view/pages/general/about.php'></a>";
+				}
+				?>
+			</li>
 
-			if (isset($_SESSION['uname'])) {
-				echo "<li><a href='/EzRecruit/view/pages/registration.php'>Sign Up</a></li>";
-			} else {
-				echo "";
-			}
-			?>
+			<li>
+				<?php
+				if (isset($_SESSION['user'])) {
+					echo "<a href='/EzRecruit/view/pages/recruiter/login.php'>Recruiter</a>";
+				} else {
+					echo "<a href='/EzRecruit/view/pages/general/about.php'></a>";
+				}
+				?>
+			</li>
+
+			<li>
+				<?php
+				if (isset($_SESSION['user'])) {
+					echo "<a href='/EzRecruit/view/pages/logout.php'>Logout</a>";
+				} else {
+					echo "<a href='/EzRecruit/view/pages/general/login.php'>Login</a>";
+				}
+				?>
+			</li>
 		</ul>
 	</nav>
 </header>

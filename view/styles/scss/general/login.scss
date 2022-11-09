@@ -1,0 +1,53 @@
+.loginCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+  }
+
+  .formCon {
+    width: 650px;
+    height: 500px;
+    background-color: rgb(231, 230, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: 3px 3px 5px;
+
+    .inputCon {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        border-radius: 10px;
+        border: none;
+        width: 350px;
+        height: 3vh;
+      }
+    }
+
+    .submitCon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        height: 3vh;
+        width: 10vw;
+        font-size: large;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
