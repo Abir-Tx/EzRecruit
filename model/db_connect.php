@@ -3,8 +3,8 @@
 function db_connect()
 {
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$username = "abir";
+	$password = "12918";
 	$dbname = "ezrecruit";
 
 	try {
