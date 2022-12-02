@@ -47,7 +47,7 @@
 
 		<div class="counterBoxes">
 			<h3>
-				Admins
+				Recruiters
 			</h3>
 			<span>
 				<?php echo $count ?>
@@ -122,16 +122,13 @@
 	<section>
 		<div class="thingsToDo-con">
 			<div class="thingsToDo">
-				<h2>Things to do</h2>
+				<h2>Things To Do</h2>
 				<ul>
 					<li>
 						<a href="addAdmin.php">Add Admin</a>
 					</li>
 					<li>
 						<a href="addRecruiter.php">Add Recruiter</a>
-					</li>
-					<li>
-						<a href="addCandidate.php">Add Candidate</a>
 					</li>
 				</ul>
 			</div>
