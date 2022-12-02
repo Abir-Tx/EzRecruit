@@ -27,81 +27,95 @@
 	echo "<H1>Welcome " . ucwords($_SESSION['admin']) . "</H1>";
 	?>
 
-	<!-- Show the number of recruiters count from the database -->
-	<?php
-	include_once "../../../model/db_connect.php";
+	<div class="counter-con">
+		<!-- Show the number of recruiters count from the database -->
+		<?php
+		include_once "../../../model/db_connect.php";
 
-	$conn = db_connect();
+		$conn = db_connect();
 
-	$query = "SELECT COUNT(*) AS count FROM recruiters";
+		$query = "SELECT COUNT(*) AS count FROM recruiters";
 
-	$result = $conn->query($query);
+		$result = $conn->query($query);
 
-	$row = $result->fetch(PDO::FETCH_ASSOC);
+		$row = $result->fetch(PDO::FETCH_ASSOC);
 
-	$count = $row['count'];
+		$count = $row['count'];
 
-	$conn = null;
-	?>
+		$conn = null;
+		?>
 
-	<div class="counterBoxes">
-		<p>
-			Currently there are <?php echo $count ?> registered recruiters on the website
-		</p>
-	</div>
-
-
-	<!-- Show the number of candidates count from the database -->
-	<?php
-	$conn = db_connect();
-
-	$query = "SELECT COUNT(*) AS count FROM candidates";
-
-	$result = $conn->query($query);
-	$row = $result->fetch(PDO::FETCH_ASSOC);
-
-	$count = $row['count'];
+		<div class="counterBoxes">
+			<h3>
+				Current Registered Admins
+			</h3>
+			<span>
+				<?php echo $count ?>
+			</span>
+		</div>
 
 
-	?>
+		<!-- Show the number of candidates count from the database -->
+		<?php
+		$conn = db_connect();
 
-	<div class="counterBoxes">
-		<p>
-			Currently there are <?php echo $count ?> registered candidates on the website
-		</p>
-	</div>
+		$query = "SELECT COUNT(*) AS count FROM candidates";
 
-	<!-- Show the number of general users count from the database -->
-	<?php
+		$result = $conn->query($query);
+		$row = $result->fetch(PDO::FETCH_ASSOC);
 
-	$query = "SELECT COUNT(*) AS count FROM users";
-
-	$result = $conn->query($query);
-	$row = $result->fetch(PDO::FETCH_ASSOC);
-	$count = $row['count'];
-	?>
-
-	<div class="counterBoxes">
-		<p>
-			Currently there are <?php echo $count ?> registered general users on the website
-		</p>
-	</div>
+		$count = $row['count'];
 
 
-	<!-- Show the number of admins count from the database -->
-	<?php
-	$query = "SELECT COUNT(*) AS count FROM admins";
+		?>
 
-	$result = $conn->query($query);
-	$row = $result->fetch(PDO::FETCH_ASSOC);
-	$count = $row['count'];
-	$conn = null;
-	?>
+		<div class="counterBoxes">
+			<h3>
+				Current Registered Candidates
+			</h3>
+			<span>
+				<?php echo $count ?>
+			</span>
+		</div>
 
-	<div class="counterBoxes">
-		<p>
-			Currently there are <?php echo $count ?> registered admins on the website
-		</p>
+		<!-- Show the number of general users count from the database -->
+		<?php
+
+		$query = "SELECT COUNT(*) AS count FROM users";
+
+		$result = $conn->query($query);
+		$row = $result->fetch(PDO::FETCH_ASSOC);
+		$count = $row['count'];
+		?>
+
+		<div class="counterBoxes">
+			<h3>
+				Current Registered General Users
+			</h3>
+			<span>
+				<?php echo $count ?>
+			</span>
+		</div>
+
+
+		<!-- Show the number of admins count from the database -->
+		<?php
+		$query = "SELECT COUNT(*) AS count FROM admins";
+
+		$result = $conn->query($query);
+		$row = $result->fetch(PDO::FETCH_ASSOC);
+		$count = $row['count'];
+		$conn = null;
+		?>
+
+		<div class="counterBoxes">
+			<h3>
+				Current Registered Admins
+			</h3>
+			<span>
+				<?php echo $count ?>
+			</span>
+		</div>
 	</div>
 
 

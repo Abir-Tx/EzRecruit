@@ -1,2 +1,25 @@
-.counterBoxes {
+.counter-con {
+  display: flex;
+  padding: 10px;
+  .counterBoxes {
+    width: 25vw;
+    height: 45vh;
+    background-color: transparent;
+    margin: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    h3 {
+      text-align: center;
+      padding: 10px;
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //       text-align: center;
+      //       padding: 10px;
+      font-size: 15rem;
+      font-weight: bolder;
+    }
+  }
 }

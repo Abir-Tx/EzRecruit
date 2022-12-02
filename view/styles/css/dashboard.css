@@ -1,1 +1,22 @@
-/*# sourceMappingURL=dashboard.css.map */
+.counter-con {
+  display: flex;
+  padding: 10px;
+}
+.counter-con .counterBoxes {
+  width: 25vw;
+  height: 45vh;
+  background-color: transparent;
+  margin: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.counter-con .counterBoxes h3 {
+  text-align: center;
+  padding: 10px;
+}
+.counter-con .counterBoxes span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15rem;
+  font-weight: bolder;
+}/*# sourceMappingURL=dashboard.css.map */
