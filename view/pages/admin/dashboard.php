@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dashboard | EzRecruit </title>
 	<link rel="stylesheet" href="../../styles/css/commons.css">
+	<link rel="stylesheet" href="../../styles/css/dashboard.css">
 </head>
 
 <body>
@@ -43,9 +44,11 @@
 	$conn = null;
 	?>
 
-	<p>
-		Currently there are <?php echo $count ?> registered recruiters on the website
-	</p>
+	<div class="counterBoxes">
+		<p>
+			Currently there are <?php echo $count ?> registered recruiters on the website
+		</p>
+	</div>
 
 
 	<!-- Show the number of candidates count from the database -->
@@ -62,9 +65,11 @@
 
 	?>
 
-	<p>
-		Currently there are <?php echo $count ?> registered candidates on the website
-	</p>
+	<div class="counterBoxes">
+		<p>
+			Currently there are <?php echo $count ?> registered candidates on the website
+		</p>
+	</div>
 
 	<!-- Show the number of general users count from the database -->
 	<?php
@@ -76,9 +81,11 @@
 	$count = $row['count'];
 	?>
 
-	<p>
-		Currently there are <?php echo $count ?> registered general users on the website
-	</p>
+	<div class="counterBoxes">
+		<p>
+			Currently there are <?php echo $count ?> registered general users on the website
+		</p>
+	</div>
 
 
 	<!-- Show the number of admins count from the database -->
@@ -91,9 +98,11 @@
 	$conn = null;
 	?>
 
-	<p>
-		Currently there are <?php echo $count ?> registered admins on the website
-	</p>
+	<div class="counterBoxes">
+		<p>
+			Currently there are <?php echo $count ?> registered admins on the website
+		</p>
+	</div>
 
 
 

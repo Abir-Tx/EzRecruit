@@ -44,4 +44,21 @@
 .loginCon .formCon .submitCon input:hover {
   font-weight: bold;
   cursor: pointer;
+}/*# sourceMappingURL=login.css.map */ cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.loginBox .miniCon .formContainer .btnCon .subBtn:active {
+  box-shadow: inset 2px 2px 3px black;
+}
+.loginBox .miniCon .formContainer .remMe {
+  font-weight: bold;
+}
+.loginBox .miniCon .formContainer .error {
+  color: red;
+  font-style: italic;
+}
+.loginBox .miniCon .formContainer .linkCon p {
+  text-align: center;
 }/*# sourceMappingURL=login.css.map */
