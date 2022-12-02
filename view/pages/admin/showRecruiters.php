@@ -49,7 +49,7 @@
 			echo "<td>" . $row['email'] . "</td>";
 			echo "<td><img src='../../" . $row['propic'] . "' alt='Profile Pic' width='50px' height='50px'></td>";
 			echo "<td><a href='../../../controller/admin/deleteRecruiter.php?id=" . $row['id'] . "'>Delete</a></td>";
-			echo "<td><a href='./editRecruiter.php?id=" . $row['id'] . "'>Edit</a></td>";
+			echo "<td><a href='../../../controller/admin/editRecruiter.php?id=" . $row['id'] . "'>Edit</a></td>";
 			echo "</tr>";
 		}
 
