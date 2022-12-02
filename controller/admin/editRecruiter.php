@@ -20,6 +20,7 @@ $conn = db_connect();
 
 $query = "SELECT * FROM recruiters WHERE id = $id";
 
+$stmt = "";
 try {
 	$stmt = $conn->prepare($query);
 	$stmt->execute();
@@ -41,6 +42,47 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
+
+<!-- Handle the update process -->
+<?php
+
+// if request method is post then update the recruiter details in the database
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	// get the recruiter details from the form
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$username = $_POST['uname'];
+	$password = $_POST['password'];
+	$id = $_POST['id'];
+
+	// connect to the database
+
+	$conn = db_connect();
+
+	// update the recruiter details in the database
+
+	$query = "UPDATE recruiters SET name = '$name', email = '$email', username = '$username', password = '$password' WHERE id = $id";
+
+
+
+	try {
+		$stmt = $conn->prepare($query);
+		$stmt->execute();
+	} catch (PDOException $e) {
+		echo $e->getMessage();
+	}
+
+	// redirect to the showRecruiters page
+
+	header("Location: ../../view/pages/admin/showRecruiters.php");
+}
+
+?>
+
+
 <!-- Create the form  -->
 
 <head>
@@ -59,7 +101,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 			<h2 class="text-center">Edit Recruiter</h2>
 
-			<form action="editRecruiter.php?id=<?php echo $id ?>" method="POST">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
 				<div class="form-group">
 
