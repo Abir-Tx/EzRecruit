@@ -12,7 +12,7 @@
 	<h2>
 		Add Admin
 	</h2>
-	<form action="../../../controller/admin/addAdmin.php" method="POST">
+	<form action="../../../controller/admin/createAdmin.php" method="POST">
 		<label for="uname"> User Name</label>
 		<input type="text" name="uname" id="uname" placeholder="Enter your user name">
 		<br>
