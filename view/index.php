@@ -32,11 +32,11 @@
 
 		<div class="things">
 			<div class="blocks">
-				<a href="#">Sign Up</a>
+				<a href="./pages/general/signup.php">Sign Up</a>
 			</div>
 
 			<div class="blocks">
-				<a href="#">Login</a>
+				<a href="./pages/general/login.php">Login</a>
 			</div>
 
 			<div class="blocks">
