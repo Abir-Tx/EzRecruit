@@ -24,7 +24,7 @@
 	@include "../components/subMenu.php";
 
 
-	echo "<H1>Welcome " . ucwords($_SESSION['admin']) . "</H1>";
+	echo "<H1 class='heading'>Welcome " . ucwords($_SESSION['admin']) . "</H1>";
 	?>
 
 	<div class="counter-con">
