@@ -45,14 +45,16 @@
 		$conn = null;
 		?>
 
-		<div class="counterBoxes">
-			<h3>
-				Recruiters
-			</h3>
-			<span>
-				<?php echo $count ?>
-			</span>
-		</div>
+		<a href="./showRecruiters.php">
+			<div class="counterBoxes">
+				<h3>
+					Recruiters
+				</h3>
+				<span>
+					<?php echo $count ?>
+				</span>
+			</div>
+		</a>
 
 
 		<!-- Show the number of candidates count from the database -->
@@ -69,14 +71,16 @@
 
 		?>
 
-		<div class="counterBoxes">
-			<h3>
-				Candidates
-			</h3>
-			<span>
-				<?php echo $count ?>
-			</span>
-		</div>
+		<a href="#">
+			<div class="counterBoxes">
+				<h3>
+					Candidates
+				</h3>
+				<span>
+					<?php echo $count ?>
+				</span>
+			</div>
+		</a>
 
 		<!-- Show the number of general users count from the database -->
 		<?php
@@ -88,14 +92,16 @@
 		$count = $row['count'];
 		?>
 
-		<div class="counterBoxes">
-			<h3>
-				General Users
-			</h3>
-			<span>
-				<?php echo $count ?>
-			</span>
-		</div>
+		<a href="#">
+			<div class="counterBoxes">
+				<h3>
+					General Users
+				</h3>
+				<span>
+					<?php echo $count ?>
+				</span>
+			</div>
+		</a>
 
 
 		<!-- Show the number of admins count from the database -->
@@ -108,14 +114,16 @@
 		$conn = null;
 		?>
 
-		<div class="counterBoxes">
-			<h3>
-				Admins
-			</h3>
-			<span>
-				<?php echo $count ?>
-			</span>
-		</div>
+		<a href="#">
+			<div class="counterBoxes">
+				<h3>
+					Admins
+				</h3>
+				<span>
+					<?php echo $count ?>
+				</span>
+			</div>
+		</a>
 	</div>
 
 
