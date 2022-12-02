@@ -8,6 +8,7 @@
   background-color: transparent;
   margin: 5px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 .counter-con .counterBoxes h3 {
   text-align: center;
@@ -19,4 +20,9 @@
   align-items: center;
   font-size: 15rem;
   font-weight: bolder;
+}
+.counter-con .counterBoxes:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }/*# sourceMappingURL=dashboard.css.map */
