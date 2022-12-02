@@ -48,6 +48,67 @@
 	</p>
 
 
+	<!-- Show the number of candidates count from the database -->
+	<?php
+	include_once "../../../model/db_connect.php";
+
+	$conn = db_connect();
+
+	$query = "SELECT COUNT(*) AS count FROM candidates";
+
+	$result = $conn->query($query);
+	$row = $result->fetch(PDO::FETCH_ASSOC);
+
+	$count = $row['count'];
+
+	$conn = null;
+	?>
+
+	<p>
+		Currently there are <?php echo $count ?> registered candidates on the website
+	</p>
+
+	<!-- Show the number of general users count from the database -->
+	<?php
+	include_once "../../../model/db_connect.php";
+
+	$conn = db_connect();
+
+	$query = "SELECT COUNT(*) AS count FROM users";
+
+	$result = $conn->query($query);
+	$row = $result->fetch(PDO::FETCH_ASSOC);
+	$count = $row['count'];
+	$conn = null;
+	?>
+
+	<p>
+		Currently there are <?php echo $count ?> registered general users on the website
+	</p>
+
+
+	<!-- Show the number of admins count from the database -->
+	<?php
+	include_once "../../../model/db_connect.php";
+
+	$conn = db_connect();
+
+	$query = "SELECT COUNT(*) AS count FROM admins";
+
+	$result = $conn->query($query);
+	$row = $result->fetch(PDO::FETCH_ASSOC);
+	$count = $row['count'];
+	$conn = null;
+	?>
+
+	<p>
+		Currently there are <?php echo $count ?> registered admins on the website
+	</p>
+
+
+
+
+
 
 	<?php @include "../../layout/footer.php" ?>
 </body>
