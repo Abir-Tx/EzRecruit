@@ -47,7 +47,7 @@
 
 		<div class="counterBoxes">
 			<h3>
-				Current Registered Admins
+				Admins
 			</h3>
 			<span>
 				<?php echo $count ?>
@@ -71,7 +71,7 @@
 
 		<div class="counterBoxes">
 			<h3>
-				Current Registered Candidates
+				Candidates
 			</h3>
 			<span>
 				<?php echo $count ?>
@@ -90,7 +90,7 @@
 
 		<div class="counterBoxes">
 			<h3>
-				Current Registered General Users
+				General Users
 			</h3>
 			<span>
 				<?php echo $count ?>
@@ -110,7 +110,7 @@
 
 		<div class="counterBoxes">
 			<h3>
-				Current Registered Admins
+				Admins
 			</h3>
 			<span>
 				<?php echo $count ?>

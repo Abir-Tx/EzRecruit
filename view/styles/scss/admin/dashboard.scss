@@ -8,19 +8,29 @@
     margin: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
+    //     Adding a glass effect
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     h3 {
       text-align: center;
       padding: 10px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
     }
 
     span {
       display: flex;
       justify-content: center;
       align-items: center;
-      //       text-align: center;
-      //       padding: 10px;
       font-size: 15rem;
       font-weight: bolder;
+      font-family: "Poppins", sans-serif;
     }
 
     &:hover {
