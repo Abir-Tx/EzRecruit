@@ -50,8 +50,6 @@
 
 	<!-- Show the number of candidates count from the database -->
 	<?php
-	include_once "../../../model/db_connect.php";
-
 	$conn = db_connect();
 
 	$query = "SELECT COUNT(*) AS count FROM candidates";
@@ -61,7 +59,7 @@
 
 	$count = $row['count'];
 
-	$conn = null;
+
 	?>
 
 	<p>
@@ -70,16 +68,12 @@
 
 	<!-- Show the number of general users count from the database -->
 	<?php
-	include_once "../../../model/db_connect.php";
-
-	$conn = db_connect();
 
 	$query = "SELECT COUNT(*) AS count FROM users";
 
 	$result = $conn->query($query);
 	$row = $result->fetch(PDO::FETCH_ASSOC);
 	$count = $row['count'];
-	$conn = null;
 	?>
 
 	<p>
@@ -89,10 +83,6 @@
 
 	<!-- Show the number of admins count from the database -->
 	<?php
-	include_once "../../../model/db_connect.php";
-
-	$conn = db_connect();
-
 	$query = "SELECT COUNT(*) AS count FROM admins";
 
 	$result = $conn->query($query);
