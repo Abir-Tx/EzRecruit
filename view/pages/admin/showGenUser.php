@@ -55,7 +55,7 @@
 			echo "<tr>";
 			echo "<td>" . $row['name'] . "</td>";
 			echo "<td>" . $row['email'] . "</td>";
-			echo "<td><a href='../../../controller/admin/editGenUser.php?id=" . $row['id'] . "'>Edit</a> | <a href='./deleteGenUser.php?id=" . $row['id'] . "'>Delete</a></td>";
+			echo "<td><a href='../../../controller/admin/editGenUser.php?id=" . $row['id'] . "'>Edit</a> | <a href='../../../controller/admin/deleteGenUser.php?id=" . $row['id'] . "'>Delete</a></td>";
 			echo "</tr>";
 		}
 

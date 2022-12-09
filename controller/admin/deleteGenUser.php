@@ -1,6 +1,6 @@
 <?php
 
-// Delete the candidate from the database using the id passed in the url
+// Delete the general user from the database using the id passed in the url 
 
 // include the database connection file
 
@@ -14,9 +14,9 @@ $id = $_GET['id'];
 
 $conn = db_connect();
 
-// delete the candidate from the database
+// delete the general user from the database
 
-$query = "DELETE FROM candidates WHERE id = $id";
+$query = "DELETE FROM users WHERE id = $id";
 
 try {
 	$stmt = $conn->prepare($query);
@@ -25,6 +25,6 @@ try {
 	echo $e->getMessage();
 }
 
-// redirect to the showCandidates page
+// redirect to the showGenUser page
 
 header("Location: ../../view/pages/admin/showGenUser.php");
