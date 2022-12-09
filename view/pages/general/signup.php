@@ -28,26 +28,26 @@
 		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" onsubmit="return validateForm()">
 			<div class="inputCon">
 				<label for="name">Name</label>
-				<input type="text" name="name" id="name" placeholder="Enter your name" onblur="checkName()" onkeyup="checkName()">
+				<input type="text" name="name" id="name" placeholder="Enter your name" onblur="checkName('name')" onkeyup="checkName('name')">
 				<span class="nameErr" id="nameErr"></span>
 			</div>
 
 			<div class="inputCon">
 				<label for="email">Email</label>
-				<input type="email" name="email" id="email" placeholder="Enter your email" onblur="checkEmail()" onkeyup="checkEmail()">
+				<input type="email" name="email" id="email" placeholder="Enter your email" onblur="checkEmail('email')" onkeyup="checkEmail('email')">
 				<span class="emailErr" id="emailErr"></span>
 			</div>
 
 
 			<div class="inputCon">
 				<label for="pass">Password</label>
-				<input type="password" name="pass" id="pass" placeholder="Enter your password" onblur="checkPass()" onkeyup="checkPass()">
+				<input type="password" name="pass" id="pass" placeholder="Enter your password" onblur="checkPass('pass')" onkeyup="checkPass('pass')">
 				<span class="passErr" id="passErr"></span>
 			</div>
 
 			<div class="inputCon">
 				<label for="cpass">Confirm Password</label>
-				<input type="password" name="cpass" id="cpass" placeholder="Confirm your password" onblur="checkCpass()" onkeyup="checkCpass()">
+				<input type="password" name="cpass" id="cpass" placeholder="Confirm your password" onblur="checkCpass('cpass')" onkeyup="checkCpass('cpass')">
 				<span class="cpassErr" id="cpassErr"></span>
 			</div>
 

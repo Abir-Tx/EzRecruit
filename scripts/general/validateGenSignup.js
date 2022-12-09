@@ -39,8 +39,8 @@ function validateForm() {
   }
 }
 
-function checkName() {
-  var name = document.getElementById("name").value;
+function checkName(nameId) {
+  var name = document.getElementById(nameId).value;
   if (name == "") {
     document.getElementById("nameErr").innerHTML = "Name is required";
   } else {
@@ -48,8 +48,8 @@ function checkName() {
   }
 }
 
-function checkEmail() {
-  var email = document.getElementById("email").value;
+function checkEmail(emailId) {
+  var email = document.getElementById(emailId).value;
   if (email == "") {
     document.getElementById("emailErr").innerHTML = "Email is required";
   } else {
@@ -57,8 +57,8 @@ function checkEmail() {
   }
 }
 
-function checkPass() {
-  var pass = document.getElementById("pass").value;
+function checkPass(passId) {
+  var pass = document.getElementById(passId).value;
   if (pass == "") {
     document.getElementById("passErr").innerHTML = "Password is required";
   } else {
@@ -66,8 +66,8 @@ function checkPass() {
   }
 }
 
-function checkCpass() {
-  var cpass = document.getElementById("cpass").value;
+function checkCpass(cpassID) {
+  var cpass = document.getElementById(cpassID).value;
   if (cpass == "") {
     document.getElementById("cpassErr").innerHTML =
       "Confirm password is required";
