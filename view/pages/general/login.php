@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
 	<link rel="stylesheet" href="../../styles/css/login.css">
+
+	<!-- JS -->
+	<script src="../../../scripts/general/validateGenSignup.js" defer></script>
+	<script src="../../../scripts/checkers.js" defer></script>
 </head>
 
 <body>
@@ -24,12 +28,14 @@
 			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 				<div class="inputCon">
 					<label for="email">Email</label>
-					<input type="email" name="email" id="email" placeholder="Enter your email" required>
+					<input type="email" name="email" id="email" placeholder="Enter your email" onblur="checkEmail('email')" onkeyup="checkEmail('email')">
+					<span class="emailErr" id="emailErr"></span>
 				</div>
 
 				<div class="inputCon">
 					<label for="pass">Password</label>
-					<input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+					<input type="password" name="pass" id="pass" placeholder="Enter your password" onblur="checkPass('pass')" onkeyup="checkPass('pass')">
+					<span class="passErr" id="passErr"></span>
 				</div>
 
 				<div class="submitCon">

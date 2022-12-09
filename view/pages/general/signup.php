@@ -15,6 +15,7 @@
 
 	<!-- JS -->
 	<script src="../../../scripts/general/validateGenSignup.js"></script>
+	<script src="../../../scripts/checkers.js"></script>
 </head>
 
 <body>
