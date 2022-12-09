@@ -71,7 +71,7 @@
 
 		?>
 
-		<a href="#">
+		<a href="./showCandidates.php">
 			<div class="counterBoxes">
 				<h3>
 					Candidates
