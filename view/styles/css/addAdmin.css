@@ -15,4 +15,7 @@ body .form-con .genInp {
 body .form-con .genLab {
   display: flex;
   justify-content: center;
+}
+body .form-con .submitBtn-con {
+  display: flex;
 }/*# sourceMappingURL=addAdmin.css.map */

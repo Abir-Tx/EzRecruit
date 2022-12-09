@@ -62,8 +62,10 @@
 			<br>
 
 
-			<input type="submit" value="Add Admin">
-			<br>
+			<div class="submitBtn-con">
+				<input class="submitBtn" type="submit" value="Add Admin">
+				<br>
+			</div>
 		</form>
 	</div>
 	<?php include_once '../../layout/footer.php'; ?>
