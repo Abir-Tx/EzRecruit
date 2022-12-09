@@ -17,6 +17,21 @@
 		session_start();
 	}
 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		// Handle the success and error messages
+		if (isset($_GET['success'])) {
+			$success = $_GET['success'];
+			if ($success == "createAdmin") {
+				echo "<script>alert('Admin is created successfully');</script>";
+			}
+		} else {
+			echo "<script>alert('Admin is not added to the database');</script>";
+		}
+	}
+
+
+
+
 	$count = 0;
 
 

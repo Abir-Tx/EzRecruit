@@ -11,20 +11,27 @@
 </head>
 
 <body>
-	<?php include_once '../../layout/header.php'; ?>
+	<?php
+	include_once '../../layout/header.php';
+	include_once "../../../controller/admin/createAdmin.php";
+	?>
 	<h2 class="heading">
 		Add Admin
 	</h2>
 	<div class="form-con">
-		<form action="../../../controller/admin/createAdmin.php" method="POST">
+		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 			<label for="fname" class="genLab">First Name</label>
 			<input class="genInp" type="text" name="fname" id="fname" placeholder="Enter your first name">
+			<span class="fnameErr" id="fnameErr"></span>
 			<br>
 			<label for="lname" class="genLab">Last Name</label>
 			<input class="genInp" type="text" name="lname" id="lname" placeholder="Enter your last name">
 			<br>
 			<label for="uname" class="genLab"> User Name</label>
 			<input class="genInp" type="text" name="uname" id="uname" placeholder="Enter your user name">
+			<span class="unameErr" id="unameErr">
+				<?php echo $unameErr; ?>
+			</span>
 			<br>
 			<label for="email" class="genLab">Email</label>
 			<input class="genInp" type="email" name="email" id="email" placeholder="Enter your email">
