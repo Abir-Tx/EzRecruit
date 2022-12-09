@@ -114,7 +114,7 @@
 		$conn = null;
 		?>
 
-		<a href="#">
+		<a href="./showAdmins.php">
 			<div class="counterBoxes">
 				<h3>
 					Admins
