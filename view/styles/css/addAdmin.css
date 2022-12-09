@@ -1,0 +1,18 @@
+body .heading {
+  text-align: center;
+}
+body .form-con {
+  display: flex;
+  justify-content: center;
+}
+body .form-con input {
+  margin: 5px;
+  padding: 5px;
+}
+body .form-con .genInp {
+  width: 100%;
+}
+body .form-con .genLab {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=addAdmin.css.map */

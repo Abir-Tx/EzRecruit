@@ -1,0 +1,23 @@
+body {
+  .heading {
+    text-align: center;
+  }
+
+  .form-con {
+    display: flex;
+    justify-content: center;
+    input {
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .genInp {
+      width: 100%;
+    }
+
+    .genLab {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
