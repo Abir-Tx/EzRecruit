@@ -59,17 +59,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// get the candidate details from the form
 
-	$name = $_POST['fname'];
-
+	$fname = $_POST['fname'];
+	$lname = $_POST['lname'];
 	$email = $_POST['email'];
-
 	$password = $_POST['password'];
+	$phone = $_POST['phone'];
+	$bio = $_POST['bio'];
+	$address = $_POST['address'];
+
+
 
 	$id = $_POST['id'];
 
 	// update the candidate details in the database
 
-	$query = "UPDATE candidates SET fname = '$name', email = '$email', password = '$password' WHERE id = $id";
+	$query = "UPDATE candidates SET fname = '$fname', lname = '$lname', email = '$email', phone = '$phone', bio='$bio', address='$address, password = '$password' WHERE id = $id";
 
 
 	try {
@@ -113,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 							<?php
 
-							if (isset($_SESSION['errors']['name'])) {
+							if (isset($_SESSION['errors']['fname'])) {
 
 								echo "has-error";
 							}
@@ -122,15 +126,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 							">
 
-							<label for="name">Name</label>
+							<label for="name">First Name</label>
 
-							<input type="text" name="name" id="name" class="form-control" value="<?php echo $row['fname']; ?>">
+							<input type="text" name="fname" id="fname" class="form-control" value="<?php echo $row['fname']; ?>">
 
 							<?php
 
-							if (isset($_SESSION['errors']['name'])) {
+							if (isset($_SESSION['errors']['fname'])) {
 
-								echo "<span class='help-block'>" . $_SESSION['errors']['name'] . "</span>";
+								echo "<span class='help-block'>" . $_SESSION['errors']['fname'] . "</span>";
 							}
 
 							?>
@@ -191,6 +195,134 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 								echo "<span class='help-block
 
 								'>" . $_SESSION['errors']['password'] . "</span>";
+							}
+
+							?>
+
+						</div>
+
+						<!-- Last name  -->
+
+						<div class="form-group
+
+							<?php
+
+							if (isset($_SESSION['errors']['lname'])) {
+
+								echo "has-error";
+							}
+
+							?>
+
+							">
+
+							<label for="lname">Last Name</label>
+
+							<input type="text" name="lname" id="lname" class="form-control" value="<?php echo $row['lname']; ?>">
+
+							<?php
+
+							if (isset($_SESSION['errors']['lname'])) {
+
+								echo "<span class='help-block
+
+								'>" . $_SESSION['errors']['lname'] . "</span>";
+							}
+
+							?>
+
+						</div>
+
+						<!-- Phone number  -->
+
+						<div class="form-group
+
+							<?php
+
+							if (isset($_SESSION['errors']['phone'])) {
+
+								echo "has-error";
+							}
+
+							?>
+
+							">
+
+							<label for="phone">Phone Number</label>
+
+							<input type="text" name="phone" id="phone" class="form-control" value="<?php echo $row['phone']; ?>">
+
+							<?php
+
+							if (isset($_SESSION['errors']['phone'])) {
+
+								echo "<span class='help-block
+
+								'>" . $_SESSION['errors']['phone'] . "</span>";
+							}
+
+							?>
+
+						</div>
+
+						<!-- Address  -->
+
+						<div class="form-group
+
+							<?php
+
+							if (isset($_SESSION['errors']['address'])) {
+
+								echo "has-error";
+							}
+
+							?>
+
+							">
+
+							<label for="address">Address</label>
+
+							<input type="text" name="address" id="address" class="form-control" value="<?php echo $row['address']; ?>">
+
+							<?php
+
+							if (isset($_SESSION['errors']['address'])) {
+
+								echo "<span class='help-block
+
+								'>" . $_SESSION['errors']['address'] . "</span>";
+							}
+
+							?>
+
+						</div>
+
+						<!-- Bio -->
+
+						<div class="form-group
+
+							<?php
+
+							if (isset($_SESSION['errors']['bio'])) {
+
+								echo "has-error";
+							}
+
+							?>
+
+							">
+
+							<label for="bio">Bio</label>
+
+							<textarea name="bio" id="bio" class="form-control"><?php echo $row['bio']; ?></textarea>
+
+							<?php
+
+							if (isset($_SESSION['errors']['bio'])) {
+
+								echo "<span class='help-block
+
+								'>" . $_SESSION['errors']['bio'] . "</span>";
 							}
 
 							?>
