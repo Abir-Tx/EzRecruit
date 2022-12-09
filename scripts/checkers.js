@@ -36,3 +36,12 @@ function checkCpass(cpassID) {
     document.getElementById("cpassErr").innerHTML = "";
   }
 }
+
+function checkUsername(usernameId, usernameErrorId) {
+  var username = document.getElementById(usernameId).value;
+  if (username == "") {
+    document.getElementById(usernameErrorId).innerHTML = "Username is required";
+  } else {
+    document.getElementById(usernameErrorId).innerHTML = "";
+  }
+}
