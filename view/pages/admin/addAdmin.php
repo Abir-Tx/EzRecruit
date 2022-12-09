@@ -35,24 +35,30 @@
 			<br>
 			<label for="email" class="genLab">Email</label>
 			<input class="genInp" type="email" name="email" id="email" placeholder="Enter your email">
+			<span class="emailErr" id="emailErr"></span>
 			<br>
 			<label for="password" class="genLab">Password</label>
 			<input class="genInp" type="password" name="password" id="password" placeholder="Enter your password">
+			<span class="passErr" id="passErr"></span>
 			<br>
 			<label for="confirmPassword" class="genLab">Confirm Password</label>
 			<input class="genInp" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password">
+			<span class="cPassErr" id="cPassErr"></span>
 			<br>
 
 			<label for="gender" class="inpLabel">Gender: </label>
 			<input type="radio" name="gender" value="female">Female
 			<input type="radio" name="gender" value="male">Male
 			<input type="radio" name="gender" value="other">Other
+			<span class="genderErr" id="genderErr"></span>
 			<br>
 			<label for="dob">Date of Birth</label>
 			<input type="date" name="dob" id="dob">
+			<span class="dobErr" id="dobErr"></span>
 			<br>
 			<label for="profilePic">Profile Picture</label>
 			<input type="file" name="profilePic" id="profilePic">
+			<span class="profilePicErr" id="profilePicErr"></span>
 			<br>
 
 
