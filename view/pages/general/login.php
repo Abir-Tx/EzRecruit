@@ -12,8 +12,9 @@
 	<link rel="stylesheet" href="../../styles/css/login.css">
 
 	<!-- JS -->
-	<script src="../../../scripts/general/validateGenSignup.js" defer></script>
 	<script src="../../../scripts/checkers.js" defer></script>
+	<script src="../../../scripts/general/validateGenLogin.js" defer></script>
+
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 	<div class="loginCon">
 		<h2>Login</h2>
 		<div class="formCon">
-			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" onsubmit="validateForm()">
 				<div class="inputCon">
 					<label for="email">Email</label>
 					<input type="email" name="email" id="email" placeholder="Enter your email" onblur="checkEmail('email')" onkeyup="checkEmail('email')">
