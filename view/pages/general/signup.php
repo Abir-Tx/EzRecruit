@@ -52,6 +52,8 @@
 			</div>
 
 			<div class="submitCon">
+				<input type="reset" value="Reset">
+				<br>
 				<input type="submit" value="Submit">
 			</div>
 		</form>
