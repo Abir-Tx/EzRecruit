@@ -9,6 +9,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+	<!-- JS -->
+	<script src="../../../scripts/checkers.js" defer></script>
 </head>
 
 <body>
@@ -31,18 +33,20 @@
 			<div class="formContainer">
 				<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
 					<label for="uname">User Name: </label>
-					<input class="inp" type="text" name="uname" id="uname" value=<?php if (isset($_COOKIE['uname'])) {
-														echo $_COOKIE['uname'];
-													} ?>>
+					<input class="inp" type="text" name="uname" onblur="checkUsername('uname', 'unameErr')" onkeyup="checkUsername('uname', 'unameErr')" id="uname" value=<?php if (isset($_COOKIE['uname'])) {
+																									echo $_COOKIE['uname'];
+																								} ?>>
 					<span class="error">* <?php echo $unameErr; ?></span>
+					<span class="unameErr" id="unameErr"></span>
 					<br><br>
 
 
 					<label for="password">Password: </label>
-					<input class="inp" type="password" name="password" id="password" value=<?php if (isset($_COOKIE['password'])) {
-															echo $_COOKIE['password'];
-														} ?>>
+					<input class="inp" type="password" name="password" id="password" onblur="checkPass('password')" onkeyup="checkPass('password')" value=<?php if (isset($_COOKIE['password'])) {
+																							echo $_COOKIE['password'];
+																						} ?>>
 					<span class="error">* <?php echo $passErr; ?></span>
+					<span class="passErr" id="passErr"></span>
 					<br><br>
 
 
@@ -56,7 +60,6 @@
 						<input type="Submit" value="Login" class="subBtn">
 					</div>
 					<br><br>
-					<!-- Task no D - Forgot Password-->
 					<div class="linkCon">
 						<p>
 							<a href="./passReset.php">Forgot Password?</a>

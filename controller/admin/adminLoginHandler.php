@@ -8,7 +8,6 @@ $unameErr = $passErr = "";
 $uname = $pass = "";
 
 $loginSuccess = false;
-$dataFileLoc = "../../model/adminUsers.json";
 
 $inputOk = false;
 $found = false;
@@ -46,11 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (!empty($_POST['remMe'])) {
 		setcookie("uname", $uname, time() + $cookieTimeout);
 		setcookie("password", $pass, time() + $cookieTimeout);
-		echo "Cookie set successfully";
 	} else {
 		setcookie("uname", "");
 		setcookie("password", "");
-		echo "Cookie not set";
 	}
 
 	/*  matching with DB data */
