@@ -92,7 +92,7 @@
 		$count = $row['count'];
 		?>
 
-		<a href="#">
+		<a href="./showGenUser.php">
 			<div class="counterBoxes">
 				<h3>
 					General Users
