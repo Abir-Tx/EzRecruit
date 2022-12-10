@@ -63,3 +63,12 @@ function checkLname(lnameId, lnameErrorId) {
     document.getElementById(lnameErrorId).innerHTML = "";
   }
 }
+
+function checkDoB(dobId, dobErrorId) {
+  var dob = document.getElementById(dobId).value;
+  if (dob == "") {
+    document.getElementById(dobErrorId).innerHTML = "Date of birth is required";
+  } else {
+    document.getElementById(dobErrorId).innerHTML = "";
+  }
+}
