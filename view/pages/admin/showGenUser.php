@@ -6,10 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Manage General User | EzRecruit</title>
+	<link rel="stylesheet" href="../../styles/css/commons.css">
+	<link rel="stylesheet" href="../../styles/css/manageUsers.css">
 </head>
 
 <body>
-	<link rel="stylesheet" href="../../styles/css/commons.css">
 
 	<?php @include "../../layout/header.php" ?>
 	<?php @include "../../../model/db_connect.php" ?>
@@ -66,10 +67,8 @@
 
 	<a href="./addGenUser.php">Add General User</a>
 
-
-
-
-
+	<!-- Add the footer -->
+	<?php @include "../../layout/footer.php" ?>
 
 </body>
 

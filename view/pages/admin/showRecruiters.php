@@ -13,6 +13,7 @@
 
 	<!-- Include the commons css -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
+	<link rel="stylesheet" href="../../styles/css/manageUsers.css">
 
 	<?php @include "../../../model/db_connect.php" ?>
 

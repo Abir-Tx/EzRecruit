@@ -1,0 +1,26 @@
+body .heading {
+  text-align: center;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
+}
+body table {
+  margin: 20px auto;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 80%;
+  text-align: center;
+  padding: 30px;
+}
+body table th {
+  border: 1px solid rgb(141, 145, 146);
+  padding: 10px;
+  background-color: rgb(170, 182, 185);
+  color: #fff;
+}
+body table td {
+  border: 1px solid #000;
+  padding: 10px;
+}/*# sourceMappingURL=showRecruiters.css.map */
