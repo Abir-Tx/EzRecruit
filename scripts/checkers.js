@@ -45,3 +45,21 @@ function checkUsername(usernameId, usernameErrorId) {
     document.getElementById(usernameErrorId).innerHTML = "";
   }
 }
+
+function checkFname(fnameId, fnameErrorId) {
+  var fname = document.getElementById(fnameId).value;
+  if (fname == "") {
+    document.getElementById(fnameErrorId).innerHTML = "First name is required";
+  } else {
+    document.getElementById(fnameErrorId).innerHTML = "";
+  }
+}
+
+function checkLname(lnameId, lnameErrorId) {
+  var lname = document.getElementById(lnameId).value;
+  if (lname == "") {
+    document.getElementById(lnameErrorId).innerHTML = "Last name is required";
+  } else {
+    document.getElementById(lnameErrorId).innerHTML = "";
+  }
+}
