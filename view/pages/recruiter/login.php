@@ -15,6 +15,9 @@
 	<?php
 	@include "../../layout/header.php";
 	@include "../../../controller/recruiter/recruiterLoginHandler.php";
+	if ($_SESSION["user"]["type"] == "recruiter") {
+		header("Location: ./cpanel.php");
+	}
 	?>
 
 	<div class="loginCon">

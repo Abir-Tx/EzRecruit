@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		session_start();
 		/* Store the whole user info into an array in session */
 		$_SESSION["user"] = $result[0];
+		$_SESSION["user"]["type"] = "guest";
 		header("Location: ../../index.php");
-		// echo $_SESSION["user"]["name"];
 	} else {
 		echo "Login failed";
 	}

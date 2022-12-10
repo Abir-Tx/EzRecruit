@@ -1,5 +1,6 @@
 <?php
 @require_once "../../../model/db_connect.php";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$uname = $_POST['uname'];
 	$password = $_POST['pass'];
@@ -30,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		session_start();
 		/* Store the whole user info into an array in session */
 		$_SESSION["user"] = $result[0];
+		$_SESSION["user"]["type"] = "recruiter";
 		header("Location: ./cpanel.php");
 		// echo $_SESSION["user"]["name"];
 	} else {
