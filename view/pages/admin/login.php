@@ -62,7 +62,7 @@
 					<br><br>
 					<div class="linkCon">
 						<p>
-							<a href="./passReset.php">Forgot Password?</a>
+							<a href="./forgetPass.php">Forgot Password?</a>
 						</p>
 					</div>
 				</form>
