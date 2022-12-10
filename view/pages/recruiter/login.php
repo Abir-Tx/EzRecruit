@@ -15,6 +15,10 @@
 	<?php
 	@include "../../layout/header.php";
 	@include "../../../controller/recruiter/recruiterLoginHandler.php";
+	// if already logged in redirect to dashboard
+	if (isset($_SESSION["user"])) {
+		header("Location: ./cpanel.php");
+	}
 	?>
 
 	<div class="loginCon">
