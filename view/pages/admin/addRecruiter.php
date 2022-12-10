@@ -6,9 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add Recruiter | EzRecruit</title>
+	<link rel="stylesheet" href="../../styles/css/commons.css">
 </head>
 
 <body>
+	<!-- add header -->
+	<?php @include "../../layout/header.php" ?>
 	<h2>
 		Add Recruiter
 	</h2>
@@ -36,7 +39,8 @@
 		<input type="submit" value="Add Recruiter">
 		<br>
 	</form>
-
+	<!-- Add footer -->
+	<?php @include "../../layout/footer.php" ?>
 </body>
 
 </html>
