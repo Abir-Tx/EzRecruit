@@ -32,6 +32,8 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Phone</th>
+				<th>Resume</th>
+				<th>Profile</th>
 				<th>Selected ?</th>
 			</tr>
 			<tbody>
@@ -46,6 +48,8 @@
 					echo "<td>" . $candidate['lname'] . "</td>";
 					echo "<td>" . $candidate['email'] . "</td>";
 					echo "<td>" . $candidate['phone'] . "</td>";
+					echo "<td><a href='" . $candidate['resume'] . "' target='_blank'>View</a></td>";
+					echo "<td><img src='../candidate/profile_pics/" . $candidate['propic'] . "' alt='Profile Picture' width='100px' height='100px'></td>";
 					// echo "<td><input type='checkbox' name='select' value='" . $candidate['id'] . "'></td>";
 					echo $candidate['selected'] === 1 ? print("<td>Yes</td>") : print("<td>No</td>");
 					echo "</tr>";
