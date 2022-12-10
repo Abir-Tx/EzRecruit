@@ -16,6 +16,18 @@ body .form-con .genLab {
   display: flex;
   justify-content: center;
 }
-body .form-con .submitBtn-con {
+body .submitBtn-con {
   display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+body .submitBtn-con .submitBtn {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: #36e4de;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=addAdmin.css.map */

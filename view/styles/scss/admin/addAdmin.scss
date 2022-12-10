@@ -19,9 +19,22 @@ body {
       display: flex;
       justify-content: center;
     }
+  }
 
-    .submitBtn-con {
-      display: flex;
+  .submitBtn-con {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    .submitBtn {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      background-color: #36e4de;
+      color: #fff;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
   }
 }
