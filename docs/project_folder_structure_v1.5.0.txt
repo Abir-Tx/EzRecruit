@@ -1,0 +1,32 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is DEC0-F685
+C:.
++---.vscode
++---controller
+|   +---admin
+|   +---candidate
+|   +---general
+|   \---recruiter
++---docs
++---model
+|   \---images
+|       +---bg
+|       \---icons
++---scripts
+|   +---admin
+|   +---general
+|   \---recruiter
+\---view
+    +---layout
+    +---pages
+    |   +---admin
+    |   +---candidate
+    |   |   +---profile_pics
+    |   |   \---resume
+    |   +---general
+    |   \---recruiter
+    \---styles
+        +---css
+        \---scss
+            +---admin
+            \---general
