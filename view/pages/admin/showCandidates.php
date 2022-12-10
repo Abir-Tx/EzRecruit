@@ -8,6 +8,7 @@
 	<title>Candidates Management | EzRecruit</title>
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/manageUsers.css">
+	<script src="../../../scripts/recruiter/updateSelection.js"></script>
 </head>
 
 <body>
@@ -34,6 +35,7 @@
 			<th>Birth Date</th>
 			<th>Bio Description</th>
 			<th>Education</th>
+			<th>Update Selection</th>
 			<th>Action</th>
 		</tr>
 
@@ -55,6 +57,7 @@
 			echo "<td>" . $row['dob'] . " (" . (date("Y") - date("Y", strtotime($row['dob']))) . " years old)</td>";
 			echo "<td>" . $row['bio'] . "</td>";
 			echo "<td>" . $row['education'] . "</td>";
+			echo "<td><input type='checkbox' name='select' value='" . $row['id'] . "' " . ($row['selected'] === 1 ? "checked" : "") . " onchange='updateSelection(" . $row['id'] . ", " . $row['selected'] . ")'></td>";
 
 
 
