@@ -9,6 +9,10 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+
+	<!-- JS -->
+	<script src="../../../scripts/checkers.js"></script>
+
 </head>
 
 <body>
@@ -25,12 +29,14 @@
 		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 			<div class="inputCon">
 				<label for="uname">Username</label>
-				<input type="text" name="uname" id="uname" placeholder="Enter your user name" required>
+				<input type="text" name="uname" id="uname" placeholder="Enter your user name" onblur="checkUsername('uname', 'unameErr')" onkeyup="checkUsername('uname', 'unameErr')">
+				<span class="unameErr" id="unameErr"></span>
 			</div>
 
 			<div class="inputCon">
 				<label for="pass">Password</label>
-				<input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+				<input type="password" name="pass" id="pass" placeholder="Enter your password" onblur="checkPass('pass')" onkeyup="checkPass('pass')">
+				<span class="passErr" id="passErr"></span>
 			</div>
 
 			<div class="inputCon">
