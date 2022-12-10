@@ -9,6 +9,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+	<link rel="stylesheet" href="../../styles/css/adminLogin.css">
 	<!-- JS -->
 	<script src="../../../scripts/checkers.js" defer></script>
 </head>
@@ -25,6 +26,11 @@
 	?>
 	<!-- HTML -->
 	<div class="loginBox">
+		<div class="errBox">
+			<span class="loginErr" id="loginErr">
+				<?php echo $loginErr; ?>
+			</span>
+		</div>
 		<div class="miniCon">
 			<h2 class="title">
 				Login To EzRecruit

@@ -6,6 +6,7 @@ if (isset($_SESSION['admin'])) {
 // Variables
 $unameErr = $passErr = "";
 $uname = $pass = "";
+$loginErr = "";
 
 $loginSuccess = false;
 
@@ -81,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		header("Location: /EzRecruit/view/pages/admin/dashboard.php");
 		die();
 	} else {
-		echo "\nFailed Login";
+		// echo "\nFailed Login";
+		$loginErr = "Invalid Username or Password";
 	}
 }
