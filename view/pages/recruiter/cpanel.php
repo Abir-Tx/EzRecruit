@@ -9,22 +9,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
-	<script>
-		function updateSelection(id, selected) {
-			selected == 1 ? selected = 2 : selected = 1;
-			let xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				console.log(selected);
-				if (this.readyState == 4 && this.status == 200) {
-					console.log(this.responseText);
-				}
-			};
-			xhttp.open("GET", `./updateSelection.php?id=${id}&selected=${selected}`, true);
-			xhttp.send();
-
-			location.reload();
-		}
-	</script>
+	<script src="../../../scripts/recruiter/updateSelection.js"></script>
 </head>
 
 <body>
@@ -66,8 +51,6 @@
 					echo "<td>" . $candidate['email'] . "</td>";
 					// show phone number with a button to call
 					echo "<td>" . $candidate['phone'] . "<a href='tel:" . $candidate['phone'] . "'> 📞 </a></td>";
-
-
 					echo "<td><a href='" . $candidate['resume'] . "' target='_blank'>View</a></td>";
 					echo "<td><img src='../candidate/profile_pics/" . $candidate['propic'] . "' alt='Profile Picture' width='100px' height='100px'></td>";
 					echo $candidate['selected'] === 1 ? print("<td>Yes</td>") : print("<td>No</td>");
@@ -84,7 +67,5 @@
 	<!-- Footer -->
 	<?php @include "../../layout/footer.php" ?>
 </body>
-
-
 
 </html>
