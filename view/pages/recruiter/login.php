@@ -15,8 +15,7 @@
 	<?php
 	@include "../../layout/header.php";
 	@include "../../../controller/recruiter/recruiterLoginHandler.php";
-	// if already logged in redirect to dashboard
-	if (isset($_SESSION["user"])) {
+	if ($_SESSION["user"]["type"] == "recruiter") {
 		header("Location: ./cpanel.php");
 	}
 	?>
