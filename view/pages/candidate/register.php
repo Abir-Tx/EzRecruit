@@ -35,12 +35,62 @@
 		$dob = $_POST['dob'];
 		$education = $_POST['education'];
 		$skills = $_POST['skills'];
-		$resume = $_POST['resume'];
+		$resume = $_FILES['resume']['name'];
 		$password = $_POST['password'];
 		$cpassword = $_POST['cpassword'];
 		$shortBio = $_POST['shortBio'];
-		$propic = $_POST['propic'];
+		$propic = $_FILES['propic']['name'];
 		$isValid = true;
+
+		// File upload
+		$target_dir = "./profile_pics/";
+		$target_file = $target_dir . basename($_FILES["resume"]["name"]);
+		$uploadOk = 1;
+		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+		// Check if image file is a actual image or fake image
+		if (isset($_POST["submit"])) {
+			$check = getimagesize($_FILES["propic"]["tmp_name"]);
+			if ($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			} else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			}
+		}
+
+		// Check if file already exists
+		if (file_exists($target_file)) {
+			echo "Sorry, file already exists.";
+			$uploadOk = 0;
+		}
+
+		/* 		// Check file size
+		if ($_FILES["propic"]["size"] > 500000) {
+			echo "Sorry, your file is too large.";
+			$uploadOk = 0;
+		}
+
+		// Allow certain file formats
+		if (
+			$imageFileType != "doc" && $imageFileType != "docx" && $imageFileType != "pdf"
+		) {
+			echo "Sorry, only DOC, DOCX & PDF files are allowed.";
+			$uploadOk = 0;
+		} */
+
+		// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) {
+			echo "Sorry, your file was not uploaded.";
+			// if everything is ok, try to upload file
+		} else {
+			if (move_uploaded_file($_FILES["propic"]["tmp_name"], $target_file)) {
+				echo "The file " . htmlspecialchars(basename($_FILES["propic"]["name"])) . " has been uploaded.";
+			} else {
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}
 	}
 
 	$conn = db_connect();
@@ -73,7 +123,7 @@
 	?>
 
 	<div class="recruitmentFormCon">
-		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 			<label for="fname">First Name: </label>
 			<input type="text" name="fname" id="fname" placeholder="First Name" required>
 			<br>
