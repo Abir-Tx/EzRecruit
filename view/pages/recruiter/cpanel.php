@@ -15,6 +15,9 @@
 	<?php
 	@include "../../layout/header.php";
 	@require_once "../../../model/db_connect.php";
+	if (!isset($_SESSION["user"])) {
+		header("Location: ./login.php");
+	}
 	?>
 
 	<div class="cpanelCon">
