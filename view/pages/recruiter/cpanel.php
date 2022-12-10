@@ -67,9 +67,7 @@
 					echo "<td>" . $candidate['phone'] . "</td>";
 					echo "<td><a href='" . $candidate['resume'] . "' target='_blank'>View</a></td>";
 					echo "<td><img src='../candidate/profile_pics/" . $candidate['propic'] . "' alt='Profile Picture' width='100px' height='100px'></td>";
-					// echo "<td><input type='checkbox' name='select' value='" . $candidate['id'] . "'></td>";
 					echo $candidate['selected'] === 1 ? print("<td>Yes</td>") : print("<td>No</td>");
-					// show checkboxes to update selection. On change of the checkbox value, update the database and refresh the page. Show the checkboxes as checked if the candidate is selected. Pass the id and the checkbox check status to the updateSelection function.
 					echo "<td><input type='checkbox' name='select' value='" . $candidate['id'] . "' " . ($candidate['selected'] === 1 ? "checked" : "") . " onchange='updateSelection(" . $candidate['id'] . ", " . $candidate['selected'] . ")'></td>";
 
 					echo "</tr>";
