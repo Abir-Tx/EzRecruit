@@ -15,7 +15,10 @@
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("ratings" + id).innerHTML = this.responseText;
+					document.getElementById("ratings" + id).innerHTML = ratings + value;
+
+					location.reload();
+
 				}
 			};
 			xhttp.open("GET", "../../../controller/admin/updateRatings.php?id=" + id + "&ratings=" + ratings + "&value=" + value, true);
