@@ -21,17 +21,6 @@
 			xhttp.open("GET", "../../../controller/admin/updateRatings.php?id=" + id + "&ratings=" + ratings + "&value=" + value, true);
 			xhttp.send();
 		}
-
-		function updateSelection(id, selected) {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					document.getElementById("selection" + id).innerHTML = this.responseText;
-				}
-			};
-			xhttp.open("GET", "../../../controller/admin/updateSelection.php?id=" + id + "&selected=" + selected, true);
-			xhttp.send();
-		}
 	</script>
 </head>
 
