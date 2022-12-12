@@ -74,7 +74,7 @@
 			echo "<td><input type='checkbox' name='select' value='" . $row['id'] . "' " . ($row['selected'] === 1 ? "checked" : "") . " onchange='updateSelection(" . $row['id'] . ", " . $row['selected'] . ")'></td>";
 			// Show ratings and update the ratings live using + and - sign buttons and update the database using ajax
 			echo "<td id='ratings" . $row['id'] . "'>" . $row['ratings'] . "</td>";
-			echo "<td><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", 1)'>+</button><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", -1)'>-</button></td>";
+			echo "<td><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", 1)'> + </button><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", -1)'> - </button></td>";
 
 
 
