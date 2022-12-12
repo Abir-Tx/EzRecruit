@@ -9,6 +9,9 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/index.css">
+
+	<!-- Script -->
+	<script src="../../../scripts/checkers.js"></script>
 </head>
 
 <body>
@@ -145,14 +148,18 @@
 	<div class="recruitmentFormCon">
 		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 			<label for="fname">First Name: </label>
-			<input type="text" name="fname" id="fname" placeholder="First Name" required>
+			<input type="text" name="fname" id="fname" placeholder="First Name" onblur="checkFname('fname', 'fnameErr')" onkeyup="checkFname('fname', 'fnameErr')">
+			<span class="fnameErr" id="fnameErr"></span>
 			<br>
 
 			<label for="lname">Last Name: </label>
-			<input type="text" name="lname" id="lname" placeholder="Last Name" required>
+			<input type="text" name="lname" id="lname" placeholder="Last Name" onblur="checkLname('lname', 'lnameErr')" onkeyup="checkLname('lname', 'lnameErr')">
+			<span class="lnameErr" id="lnameErr"></span>
 			<br>
 			<label for="email">Email: </label>
-			<input type="email" name="email" id="email" placeholder="Email" required>
+			<input type="email" name="email" id="email" placeholder="Email" onblur="checkEmail('email')" onkeyup="checkEmail('email')">
+			<span class="emailErr" id="emailErr"></span>
+
 			<br>
 			<label for="phone">Phone: </label>
 			<input type="tel" name="phone" id="phone" placeholder="Phone" required>
@@ -161,10 +168,12 @@
 			<input type="text" name="address" id="address" placeholder="Address" required>
 			<br>
 			<label for="password">Password: </label>
-			<input type="password" name="password" id="password" placeholder="Password" required>
+			<input type="password" name="password" id="password" placeholder="Password" onblur="checkPass('password')" onkeyup="checkPass('password')">
+			<span class="passErr" id="passErr"></span>
 			<br>
 			<label for="cpassword">Confirm Password: </label>
-			<input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
+			<input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" onblur="checkCpass('cpassword')" onkeyup="checkCpass('cpassword')">
+			<span class="cpassErr" id="cpassErr"></span>
 			<br>
 			<label for="resume">Resume: </label>
 			<input type="file" name="resume" id="resume" required>
