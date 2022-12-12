@@ -9,6 +9,30 @@
 	<link rel="stylesheet" href="../../styles/css/commons.css">
 	<link rel="stylesheet" href="../../styles/css/manageUsers.css">
 	<script src="../../../scripts/recruiter/updateSelection.js"></script>
+
+	<script>
+		function updateRatings(id, ratings, value) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("ratings" + id).innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "../../../controller/admin/updateRatings.php?id=" + id + "&ratings=" + ratings + "&value=" + value, true);
+			xhttp.send();
+		}
+
+		function updateSelection(id, selected) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("selection" + id).innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "../../../controller/admin/updateSelection.php?id=" + id + "&selected=" + selected, true);
+			xhttp.send();
+		}
+	</script>
 </head>
 
 <body>
@@ -36,6 +60,7 @@
 			<th>Bio Description</th>
 			<th>Education</th>
 			<th>Update Selection</th>
+			<th>Ratings</th>
 			<th>Action</th>
 		</tr>
 
@@ -58,6 +83,11 @@
 			echo "<td>" . $row['bio'] . "</td>";
 			echo "<td>" . $row['education'] . "</td>";
 			echo "<td><input type='checkbox' name='select' value='" . $row['id'] . "' " . ($row['selected'] === 1 ? "checked" : "") . " onchange='updateSelection(" . $row['id'] . ", " . $row['selected'] . ")'></td>";
+			// Show ratings and update the ratings live using + and - sign buttons and update the database using ajax
+			echo "<td id='ratings" . $row['id'] . "'>" . $row['ratings'] . "</td>";
+			echo "<td><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", 1)'>+</button><button onclick='updateRatings(" . $row['id'] . ", " . $row['ratings'] . ", -1)'>-</button></td>";
+
+
 
 
 
